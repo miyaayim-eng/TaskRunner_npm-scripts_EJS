@@ -1,0 +1,32 @@
+{
+  "siteInfo": {
+    "siteTitle": "〇〇会社"
+  },
+  "pages": {
+    "home": {
+      "name": "home",
+      "pageTitle": "〇〇会社",
+      "description": ""
+    },
+    "about": {
+      "name": "about",
+      "pageTitle": "〇〇会社について",
+      "description": ""
+    },
+    "button": {
+      "name": "button",
+      "pageTitle": "buttonページ",
+      "description": ""
+    },
+    "javascript": {
+      "name": "javascript",
+      "pageTitle": "javascriptページ",
+      "description": ""
+    },
+    "layout": {
+      "name": "layout",
+      "pageTitle": "layoutページ",
+      "description": ""
+    }
+  }
+}

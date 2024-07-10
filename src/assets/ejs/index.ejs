@@ -1,0 +1,60 @@
+<% const ROOT = `${process.cwd()}/src/assets/ejs`; -%>
+<%# ページIDを入力する -%>
+<% pageId = 'home'; -%>
+
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <%# メタデータ等 -%>
+  <%- include(`${ROOT}/_common/_head.ejs`) %>
+
+  <%# CSS -%>
+  <%- include(`${ROOT}/_common/_link.ejs`) %>
+
+  <%# JavaScripts -%>
+  <%- include(`${ROOT}/_common/_script.ejs`) %>
+</head>
+
+<body id="home">
+
+  <%# 共通SVG画像 -%>
+  <%- include(`${ROOT}/_common/_svg.ejs`) %>
+
+  <%# ヘッダー -%>
+  <%- include(`${ROOT}/_common/_header.ejs`) %>
+
+  <%# メイン -%>
+  <main class="l-main">
+    <div class="c-inner--m">
+
+      <h2>TOPページです。</h2>
+      <p><a href="/about" class="test-link">ABOUTページはこちらをクリック</a></p>
+      <p><a href="/button/" class="test-link">BUTTONページはこちらをクリック</a></p>
+      <p><a href="/layout/" class="test-link">LAYOUTページはこちらをクリック</a></p>
+      <p><a href="/javascript/" class="test-link">JAVASCRIPTページはこちらをクリック</a></p>
+
+      <p>テキスト<b>テキスト</b>テキスト<em>テキスト</em>テキスト</p>
+
+
+      <p>テキストテキスト<br>テキストテキスト<br /></p>
+
+      <!-- <h3>
+      <p>マーックアップエラー用テキスト</p>
+    </h3> -->
+
+      <p class="js-test-js-hoge">Javascriptで色変更：hogeファイル（ページ共通）</p>
+      <p class="js-test-js-foo">Javascriptで色変更：fooファイル（homeのみ）</p>
+      <p class="js-test-js-bar">Javascriptで色変更：barファイル（aboutのみ）</p>
+
+      <%- include(`${ROOT}/_page/_top/_mv.ejs`) %>
+    </div>
+
+  </main>
+
+  <%# フッター -%>
+  <%- include(`${ROOT}/_common/_footer.ejs`) %>
+
+</body>
+
+</html>

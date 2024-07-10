@@ -1,0 +1,13 @@
+@use 'global' as *;
+
+.c-inner {
+  &--s {
+    @include content-inner(sm);
+  }
+  &--m {
+    @include content-inner(md);
+  }
+  &--l {
+    @include content-inner(lg);
+  }
+}

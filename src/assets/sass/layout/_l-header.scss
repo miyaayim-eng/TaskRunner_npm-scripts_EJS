@@ -1,0 +1,6 @@
+@use 'global' as *;
+
+.l-header {
+  min-height: var(--header_height);
+  border-bottom: 1px solid #000;
+}

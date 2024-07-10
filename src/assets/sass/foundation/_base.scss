@@ -1,0 +1,69 @@
+@charset "UTF-8";
+@use 'global' as *;
+
+:root {
+  //* -------------------------------------------------------
+  //* 色
+  //* -------------------------------------------------------
+  --color_white: 255, 255, 255;
+  --color_black: 0, 0, 0;
+
+  //* -------------------------------------------------------
+  //* フォント
+  //* -------------------------------------------------------
+  --font_noto: 'Noto Sans JP', sans-serif;
+  // --font_roboto: 'Roboto', sans-serif;
+  --font_roboto: 'Roboto Flex', sans-serif;
+
+  --font_jp: 'Noto Sans JP', sans-serif;
+  --font_en: 'Roboto Flex', sans-serif;
+
+  //* -------------------------------------------------------
+  //* レイアウト
+  //* -------------------------------------------------------
+  --vw: calc(100vw - var(--scrollbarWidth));
+  --header_height: 120px;
+  --body_paddingSide_variable: 5%;
+  --body_paddingSide_constant: 120px;
+  --body_paddingSide: var(--body_paddingSide_constant);
+  --contents_width_sm: 900px;
+  --contents_width_md: 1200px;
+  --contents_width_lg: 1350px;
+  @include mq(lg) {
+    --header_height: 100px;
+    --body_paddingSide_constant: 80px;
+  }
+  @include mq(md) {
+    --header_height: 80px;
+    --body_paddingSide_constant: 40px;
+  }
+
+  //* -------------------------------------------------------
+  //* アニメーション
+  //* -------------------------------------------------------
+  --transition: 0.3s ease;
+}
+
+html {
+  overflow-y: scroll;
+  // scroll-behavior: smooth;
+}
+
+// [id] {
+//   scroll-margin-top: calc(--header_height + 40px);
+// }
+
+body {
+  position: relative;
+  font-family: var(--font_noto);
+  font-weight: 400;
+  color: rgb(var(--color_black));
+  line-height: 1.75;
+  letter-spacing: 0;
+}
+
+body.is-fixed {
+  position: fixed;
+  left: 0;
+  width: 100%;
+}
